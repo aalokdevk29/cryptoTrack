@@ -5,7 +5,7 @@ import './App.css';
 
 const CryptoTrack = React.lazy(() => import('./components/List'));
 
-function App(props) {
+function App() {
   return (
     <BrowserRouter>
       <React.Suspense fallback={'Loading...'}>
