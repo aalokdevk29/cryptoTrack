@@ -3,6 +3,7 @@ const http = require('http');
 const dotenv = require('dotenv');
 const cors = require('cors');
 
+const apiRoutes = require('./routes');
 const bodyParser = require('body-parser');
 
 dotenv.config();
@@ -15,12 +16,13 @@ app.use(bodyParser.json({ limit: '100mb' }));
 
 const corsOption = {
   origin: true,
-  methods: 'GET',
+  methods: 'GET,PUT',
   credentials: true,
 };
 
 // CORS configuration
 app.use(cors(corsOption));
+app.use('/api/v1', apiRoutes);
 
 /*
 ------------------
