@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './App.css';
 
-const CryptoTrack = React.lazy(() => import('./components/cryptoTrack'));
+const CryptoTrack = React.lazy(() => import('./components/List'));
 
 function App(props) {
   return (
